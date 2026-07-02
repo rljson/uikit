@@ -1,0 +1,67 @@
+{
+  "name": "@rljson/uikit",
+  "version": "0.0.1",
+  "description": "rljson UI kit — reusable browser UI components",
+  "homepage": "https://github.com/rljson/uikit",
+  "bugs": "https://github.com/rljson/uikit/issues",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rljson/uikit.git"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "dev": "vite",
+    "typecheck": "tsc",
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "preview": "vite preview",
+    "prepublishOnly": "pnpm run build",
+    "test": "pnpm test:unit && pnpm test:e2e && pnpm test:snapshots",
+    "test:unit": "pnpm run typecheck && vitest run --coverage && pnpm run lint",
+    "test:e2e": "playwright test",
+    "test:snapshots": "playwright test --update-snapshots",
+    "lint": "prettier --write . && eslint --fix"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.0.1",
+    "@typescript-eslint/eslint-plugin": "^8.62.1",
+    "@typescript-eslint/parser": "^8.62.1",
+    "@vitest/coverage-v8": "^4.1.9",
+    "eslint": "^10.6.0",
+    "eslint-plugin-jsdoc": "^63.0.10",
+    "eslint-plugin-tsdoc": "^0.5.2",
+    "globals": "^17.7.0",
+    "jsdom": "^29.1.1",
+    "prettier": "^3.9.4",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.62.1",
+    "vite": "^8.1.2",
+    "vitest": "^4.1.9",
+    "vitest-dom": "^0.1.1"
+  },
+  "packageManager": "pnpm@11.9.0+sha512.bd682d5d03fe525ef7c9fd6780c6884d1e756ac4c9c9fe00c538782824310dcf90e3ddc4f53835f06dfaebd5085e41855e0bcbb3b60de2ac5bbab89e5036f03b"
+}
