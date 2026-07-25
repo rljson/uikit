@@ -36,6 +36,7 @@
   "scripts": {
     "dev": "vite",
     "typecheck": "tsc",
+    "prebuild": "pnpm run test",
     "build": "vite build && tsc -p tsconfig.build.json",
     "preview": "vite preview",
     "prepublishOnly": "pnpm run build",
