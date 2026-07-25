@@ -39,6 +39,10 @@
       "url": "git@ssh.dev.azure.com:v3/mhk-carat/ds_cdm/ds-rule-ai"
     },
     {
+      "name": "ds-service-kit",
+      "url": "git@ssh.dev.azure.com:v3/mhk-carat/ds_cdm/ds-service-kit"
+    },
+    {
       "name": "server",
       "url": "https://github.com/rljson/server.git"
     },
