@@ -1,6 +1,6 @@
 {
   "name": "@rljson/uikit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "rljson UI kit — reusable browser UI components",
   "homepage": "https://github.com/rljson/uikit",
   "bugs": "https://github.com/rljson/uikit/issues",
@@ -36,6 +36,7 @@
   "scripts": {
     "dev": "vite",
     "typecheck": "tsc",
+    "prebuild": "pnpm run test",
     "build": "vite build && tsc -p tsconfig.build.json",
     "preview": "vite preview",
     "prepublishOnly": "pnpm run build",

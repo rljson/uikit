@@ -32,11 +32,19 @@ describe('renderApp', () => {
     );
   });
 
-  it('renders a description', () => {
+  it('embeds the hello-world component', () => {
     renderApp(mount);
-    const description = mount.querySelector('[data-testid="description"]');
-    expect(description).not.toBeNull();
-    expect(description!.textContent).toContain('rljson browser app template');
+    const hello = mount.querySelector('[data-testid="hello-world"]');
+    expect(hello).not.toBeNull();
+    expect(hello!.textContent).toBe('Hello, world!');
+  });
+
+  it('embeds the rljson-test web component', () => {
+    renderApp(mount);
+    const rljsonTest = mount.querySelector('rljson-test');
+    expect(rljsonTest).not.toBeNull();
+    expect(rljsonTest!.textContent).toBe('Hello');
+    expect(rljsonTest!.classList.contains('uk-rljson-test')).toBe(true);
   });
 
   it('clears previous content on re-render', () => {
