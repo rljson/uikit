@@ -39,6 +39,14 @@ describe('renderApp', () => {
     expect(hello!.textContent).toBe('Hello, world!');
   });
 
+  it('embeds the rljson-test web component', () => {
+    renderApp(mount);
+    const rljsonTest = mount.querySelector('rljson-test');
+    expect(rljsonTest).not.toBeNull();
+    expect(rljsonTest!.textContent).toBe('Hello');
+    expect(rljsonTest!.classList.contains('uk-rljson-test')).toBe(true);
+  });
+
   it('clears previous content on re-render', () => {
     renderApp(mount);
     renderApp(mount);

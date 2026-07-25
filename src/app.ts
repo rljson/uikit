@@ -5,6 +5,7 @@
 // found in the LICENSE file in the root of this package.
 
 import { helloWorld } from './components/hello-world.ts';
+import { defineRljsonTest, rljsonTestTag } from './components/rljson-test.ts';
 
 /**
  * Options for {@link renderApp}.
@@ -39,6 +40,10 @@ export const renderApp = (
   heading.textContent = title;
   heading.dataset.testid = 'title';
 
-  mount.append(heading, helloWorld());
+  defineRljsonTest();
+  const rljsonTest = document.createElement(rljsonTestTag);
+  rljsonTest.textContent = 'Hello';
+
+  mount.append(heading, helloWorld(), rljsonTest);
   return mount;
 };

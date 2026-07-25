@@ -6,4 +6,5 @@
 
 export * from './app.ts';
 export * from './components/hello-world.ts';
+export * from './components/rljson-test.ts';
 export * from './theme/inject-style.ts';
