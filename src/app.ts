@@ -4,6 +4,8 @@
 // Use of this source code is governed by terms that can be
 // found in the LICENSE file in the root of this package.
 
+import { helloWorld } from './components/hello-world.ts';
+
 /**
  * Options for {@link renderApp}.
  */
@@ -37,12 +39,6 @@ export const renderApp = (
   heading.textContent = title;
   heading.dataset.testid = 'title';
 
-  const description = document.createElement('p');
-  description.dataset.testid = 'description';
-  description.textContent =
-    'A rljson browser app template with Playwright e2e tests and ' +
-    'screenshot snapshots.';
-
-  mount.append(heading, description);
+  mount.append(heading, helloWorld());
   return mount;
 };

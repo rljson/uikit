@@ -15,6 +15,11 @@ test.describe('uikit', () => {
     await expect(title).toBeVisible();
     await expect(title).toHaveText('@rljson/uikit');
 
+    // The hello-world component is embedded and greets the world.
+    const hello = page.getByTestId('hello-world');
+    await expect(hello).toBeVisible();
+    await expect(hello).toHaveText('Hello, world!');
+
     // Write visual snapshot of the rendered app to test/golden/snapshots.
     // Do not fail the test if the screenshot differs.
     await page.screenshot({

@@ -5,3 +5,5 @@
 // found in the LICENSE file in the root of this package.
 
 export * from './app.ts';
+export * from './components/hello-world.ts';
+export * from './theme/inject-style.ts';

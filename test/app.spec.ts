@@ -32,11 +32,11 @@ describe('renderApp', () => {
     );
   });
 
-  it('renders a description', () => {
+  it('embeds the hello-world component', () => {
     renderApp(mount);
-    const description = mount.querySelector('[data-testid="description"]');
-    expect(description).not.toBeNull();
-    expect(description!.textContent).toContain('rljson browser app template');
+    const hello = mount.querySelector('[data-testid="hello-world"]');
+    expect(hello).not.toBeNull();
+    expect(hello!.textContent).toBe('Hello, world!');
   });
 
   it('clears previous content on re-render', () => {
