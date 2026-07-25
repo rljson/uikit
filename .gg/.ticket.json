@@ -15,10 +15,6 @@
       "url": "git@ssh.dev.azure.com:v3/mhk-carat/ds_cdm/ds-data-hub-bff-runtime"
     },
     {
-      "name": "ds-data-hub-core",
-      "url": "git@ssh.dev.azure.com:v3/mhk-carat/ds_cdm/ds-data-hub-core"
-    },
-    {
       "name": "ds-data-hub-pm",
       "url": "git@ssh.dev.azure.com:v3/mhk-carat/ds_cdm/ds-data-hub-pm"
     },
@@ -41,6 +37,14 @@
     {
       "name": "ds-rule-ai",
       "url": "git@ssh.dev.azure.com:v3/mhk-carat/ds_cdm/ds-rule-ai"
+    },
+    {
+      "name": "server",
+      "url": "https://github.com/rljson/server.git"
+    },
+    {
+      "name": "ds-data-hub-core",
+      "url": "git@ssh.dev.azure.com:v3/mhk-carat/ds_cdm/ds-data-hub-core"
     },
     {
       "name": "uikit",
