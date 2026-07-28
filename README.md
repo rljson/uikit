@@ -86,7 +86,7 @@ just creates a host element, hands it to the render function and returns it.
 | `src/index.ts`           | Public library entry point.                         |
 | `src/app.ts`             | Reusable, testable UI logic.                        |
 | `src/main.ts`            | Demo app bootstrap — mounts `#app` (not published). |
-| `src/*.stories.ts`       | Storybook stories (not published).                  |
+| `src/**/*.stories.ts`    | Storybook stories (not published).                  |
 | `.storybook/`            | Storybook config (`main.ts`, `preview.ts`).         |
 | `test/*.spec.ts`         | Vitest unit tests.                                  |
 | `test/e2e/*.e2e.ts`      | Playwright e2e tests against the demo app.          |
