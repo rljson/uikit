@@ -26,8 +26,9 @@ export default defineConfig(({ mode }) => {
         provider: 'v8',
         reporter: ['text', 'json', 'html'],
         include: ['src/**/*.ts'],
-        // main.ts is the DOM bootstrap (covered by e2e); *.d.ts are types only.
-        exclude: ['src/main.ts', 'src/**/*.d.ts'],
+        // main.ts is the DOM bootstrap (covered by e2e); *.stories.ts are
+        // Storybook-only and not published; *.d.ts are types only.
+        exclude: ['src/main.ts', 'src/**/*.stories.ts', 'src/**/*.d.ts'],
         all: true,
         thresholds: {
           statements: 100,
