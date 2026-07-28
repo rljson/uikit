@@ -32,4 +32,18 @@ test.describe('uikit', () => {
       fullPage: true,
     });
   });
+
+  test('renders rljson-test and matches the screenshot', async ({ page }) => {
+    await page.goto('/');
+
+    const rljsonTest = page.locator('rljson-test');
+    await expect(rljsonTest).toBeVisible();
+    await expect(rljsonTest).toHaveText('Hello');
+
+    // Write visual snapshot of the component alone, so its rendering can be
+    // reviewed via git diff independently of the surrounding app.
+    await rljsonTest.screenshot({
+      path: 'test/golden/snapshots/rljson-test.png',
+    });
+  });
 });
